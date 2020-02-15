@@ -4,25 +4,26 @@
 
 > A beautiful blog generator
 
-### 项目说明
+### Project instruction
 
-[->项目说明@掘金](https://juejin.im/post/5b53f9c4e51d4513ee6dcd3f)<br>
+[-> Project description @digjin](https://juejin.im/post/5b53f9c4e51d4513ee6dcd3f)<br>
 
-### 推送配置
+### Push configuration
 
-1. dist 推送:在目录`@/config/index.js`中配置如下字段:
+1. dist Push: in the directory `@/config/index.js` Configure the following fields:
 
 ```javascript
 module.exports = {
-  // 编译后的目录 对应的远程仓库，默认你有配置过远程仓库的SSH key
+  //The compiled directory corresponds to the remote repository.
+  //By default, you have an SSH key configured for the remote repository.
   distOriginSSh: 'git@github.com:xxx/xxx-blog-xxx.git'
 };
 ```
 
-> 配置好之后，`npm run build` 将会把`dist`下的代码推送到地址`git@github.com:xxx/xxx-blog-xxx.git`对应的仓库中
+> After configuration, `npm run build` will put `dist` push the code below to the address `git@github.com:xxx/xxx-blog-xxx.git` Corresponding warehouse
 
-2. `commit`记录信息：默认为 `npm run build` 如果你在 `build`后追加了其他信息，那这部分的信息会作为 commit message 被提交。
-   > 如果你想自定义提交信息的内容，可以在`@/config/index.js`中配置`commitMessage`属性
+2. `commit` record information: default is` npm run build` If you append other information after `build`, this part of information will be submitted as a commit message.
+    > If you want to customize the content of the commit message, you can configure the `commitMessage` property in `@/config/index.js`
 
 ```javascript
 module.exports = {
@@ -36,22 +37,22 @@ module.exports = {
 };
 ```
 
-3. 评论系统的配置
+3. Displayed name
 
-- 在目录`@/config/index.js`中先配置以下信息
+- Configure the following information in `@/config/index.js`
 
 ```javascript
 comments: {
-    // commetsRepo : 'gihub用户名/comments存储的仓库名'
+    // commetsRepo : 'gihubusername/comments存储的仓库名'
     repo: '',
-    // github-light | github-dark 主题
+    // github-light | github-dark theme
     theme: 'github-light'
   },
 ```
 
-- 配置[utteranc](https://utteranc.es/)相关信息
+- Configure [utteranc](https://utteranc.es/) related information
 
-4. 个人信息配置
+4. Personal information configuration
 
 ```javascript
 userInfo: {
@@ -71,20 +72,20 @@ userInfo: {
       { label: 'Git', percentage: '70%' },
       { label: 'Webpack', percentage: '50%' }
     ],
-    // 你所在的城市
+    // Your city
     location: 'Shanghai,CN',
-    // 职位
+    // position
     jobTitle: 'Frontend Developer',
-    // 个人描述
+    // personal description
     description: 'Things we do are all for love'
   },
 ```
 
-5. Landing 页面配置
+5. Landing Page configuration
 
 ```javascript
  ladingInfo: {
-    // landing 显示的名称
+    // landing Displayed name
     blogName: 'Dendionk',
     tagA: 'Dreamer',
     tagB: 'Coder',
@@ -96,77 +97,77 @@ userInfo: {
   },
 ```
 
-6. 主仓库推送: 未提供配置字段，当前仓库默认为主仓库
+6. Main warehouse push: no configuration field is provided, the current warehouse defaults to the main warehouse
 
-7. 服务器配置:自动拉取更新后的代码[待补充]
+7. Server configuration: Automatically pull the updated code [to be added]
 
-### 配置完成后预览本地,以及上传测试
+### Preview local and upload test after configuration
 
 ```bash
 # install dependencies
 yarn
 
-# 调试
+# debugging
 yarn dev
 
-# 打包推送代码到对应仓库
+# Package and push code to the corresponding warehouse
 yarn build
 ```
 
-### Blog 使用的 Markdown 语法说明
+### Blog Syntax Markdown Description
 
-[->语法说明链接](https://github.com/DendiSe7enGitHub/vue-blog-generater/blob/master/markdown.md)
+[->Syntax link](https://github.com/DendiSe7enGitHub/vue-blog-generater/blob/master/markdown.md)
 
-### 开发中的功能
+### Features in development
 
 <table>
   <tr>
-    <th>功能</th>
-    <th>进度</th>
-    <th>最近更新时间</th>
+    <th>Features</th>
+    <th>Progress</th>
+    <th>Last updated time</th>
   </tr>
   <tr>
-    <td>Resume简历页面</td>
-    <td>开发完成</td>
+    <td>Resume page</td>
+    <td>Development completed </td>
     <td>2018-11-30</td>
   </tr>
   <tr>
-    <td>评论系统</td>
-    <td>已接入[utteranc](https://utteranc.es/)</td>
+    <td>Comment system</td>
+    <td>Connected to [utteranc](https://utteranc.es/)</td>
     <td>2018-12-06</td>
   </tr>
   <tr>
-    <td>友链</td>
-    <td>样式和形式待定</td>
+    <td>Friendly chain</td>
+    <td>Style and form to be determined</td>
     <td>2018-12-06</td>
   </tr>
   <tr>
-    <td>Reward页</td>
-    <td>样式和形式待定</td>
+    <td>Reward page</td>
+    <td>Style and form to be determined</td>
     <td>2018-12-06</td>
   </tr>
   <tr>
-    <td>自动化部署</td>
-    <td>完成:在npm run build 之后，会自动推送到对应仓库，结合对应的托管平台的hooks，已经实现本地编译->远程服务器更新</td>
+    <td>Automated deployment</td>
+    <td>Complete: After npm run build, it will be automatically pushed to the corresponding warehouse. Combined with the corresponding hosting platform hooks, local compilation has been implemented-> remote server update</td>
     <td>2018-12-06</td>
   </tr>
    <tr>
     <td>photo gallery</td>
-    <td>完成</td>
+    <td>Done</td>
     <td>2019-01-15</td>
   </tr>
   <tr>
-    <td>上一篇下一篇取消，改成推荐阅读</td>
-    <td>形式样式设计中</td>
+    <td>Cancel the previous article and change to a recommended reading</td>
+    <td>Form style designing</td>
     <td>2019-01-15</td>
   </tr>
 </table>
 
-有更多好的建议，欢迎 pr 或者 issue，这个博客生成系统还有许多的不足，会一直维护下去的。<br>
+There are more good suggestions, welcome pr or issue, there are still many shortcomings in this blog generation system, and it will be maintained. <br>
 
-大家可以在我的 [掘金账号](https://juejin.im/user/585a2f52128fe10069ba1b95)找到我，也欢迎邮件`dendise7en@gmail.com`与我沟通
+Everyone can find me on my [nugget account](https://juejin.im/user/585a2f52128fe10069ba1b95), and you are also welcome to communicate with me by email `dendise7en@gmail.com`
 
 
-### 欢迎关注公众号 「前端恶霸」，扫码关注，好货等着你~
+### Welcome to pay attention to the public number "front-end bully", scan the code to pay attention, good goods are waiting for you ~
 
 ![](https://user-gold-cdn.xitu.io/2019/3/20/169992ac3759e2d2?w=258&h=258&f=jpeg&s=27199)
